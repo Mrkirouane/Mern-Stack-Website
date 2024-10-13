@@ -5,6 +5,7 @@ import { IoMoon } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
 
 
+
 const Navbar = () => {
 
 const { colorMode, toggleColorMode} = useColorMode();
@@ -32,6 +33,13 @@ const { colorMode, toggleColorMode} = useColorMode();
         >
           <Link to={"/"}> Kirouane Car Dealership </Link>
         </Text>
+        
+      {/* <li>
+        <a href="/about">About Us</a>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li> */}
 
         <HStack spacing={2} alignItems={"center"}>
           <Link to={"/create"}>
