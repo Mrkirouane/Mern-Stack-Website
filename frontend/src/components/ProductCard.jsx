@@ -106,8 +106,9 @@ const {success, message} =  await updateProduct(pid, updatedProduct);
       rounded="lg"
       overflow="hidden"
       transition="all 0.4s"
-      _hover={{ transform: "translateY(-5px)", shadow: "xl" }}
+      _hover={{ transform: "translateY(-10px)", shadow: "xl" }}
       bg={bg}
+      borderRadius={7}
     >
       <Image
         src={product.image}
@@ -129,7 +130,7 @@ const {success, message} =  await updateProduct(pid, updatedProduct);
         <HStack spacing={2}>
           <IconButton icon={<EditIcon />} 
           onClick={onOpen}
-          colorScheme="blue" />
+          colorScheme="green" />
           <IconButton
             icon={<DeleteIcon />}
             onClick={() => handleDeleteProduct(product._id)}

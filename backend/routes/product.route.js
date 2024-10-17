@@ -4,6 +4,26 @@ import { CreateProduct, deleteProduct, getProducts, UpdateProduct } from "../con
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const router = express.Router();
 
 
