@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
 
 app.use(express.json()); 
 
@@ -27,4 +27,17 @@ if (process.env.NODE_ENV === "production") {
 app.listen(PORT, () => {
 	connectDB();
 	console.log("Server started at http://localhost:" + PORT);
+});
+
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Serve React static files
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+// Catch-all route
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
 });

@@ -37,7 +37,7 @@ const Navbar = () => {
           bgClip={"text"}
           _hover={1}
         >
-          <Link to={"/"}> Kirouane Car Dealership </Link>
+          <Link to={"/"}> CRUD Products </Link>
         </Text>
 
         <HStack spacing={2} alignItems={"center"}>
